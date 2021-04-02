@@ -2,14 +2,13 @@
 
 	{% block contain %}
         
-		
-        <form action="/" method="post">
 		<p>
+        <form method="post">
 			{% csrf_token %}
 			{{ form }}
 			<button type="submit">Update</button>
+		</form>
 		</p>
 		
-		</form>
 	
     {% endblock contain %}

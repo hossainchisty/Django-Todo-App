@@ -17,23 +17,28 @@ def home(request):
     return render(request, 'index.html', context)
 
 def update_tasks(request, pk):
-        task = Task.objects.get(id=pk)
-        form = TaskForm(instance=task)
+    task = Task.objects.get(id=pk)
+   
+    form = TaskForm(instance=task)
 
-        if request.method == 'POST':
-            form = TaskForm(request.POST, instance=task)
-            if form.is_valid():
-                form.save() 
-            return redirect('/')
-        
-        context = {'form':form}
-        return render(request, 'update_tasks.html', context)
+    if request.method == "POST":
+    
+        form = TaskForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save() 
+          
+        return redirect('/')
+
+    context = {'form': form}
+
+    return render(request, 'update_tasks.html',context)
 
 def delete_tasks(request, pk):
     item = Task.objects.get(id=pk)
 
     if request.method == "POST":
         item.delete()
+
         return redirect('/')
         
     context = {'item':item}

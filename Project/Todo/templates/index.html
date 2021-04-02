@@ -13,33 +13,33 @@
 		</form>
 
 		<h3>Todo</h3>
+		
 		<!-- To do list items  -->
-
-		<ul id="incomplete-tasks" class="drop-items">
+		<ul id="incomplete-tasks" class="drop-items" >
 			{% for items in tasks %}
-			<li><input type="checkbox">
-				<label>{{ items }}</label>
+			<li>
+			<label>{{ items.title }}</label>
 			<button class="edit" onclick="document.location='{% url 'update' items.id %}'">Edit</button>
 			<button class="delete" onclick="document.location='{% url 'delete_task' items.id %}'">Delete</button>
 			
 			</li>
-			{% endfor %}
-			
-		
-		</ul>
-		<!-- End -->
 
 		<h3>Completed</h3>
-
 		<ul id="completed-tasks" class="drop-completed">
 			<li>
+		{% if items.complete %}
 				<input type="checkbox" checked>
 
-				<label>See the Doctor</label>
-				<input type="text">
-				<button class="edit">Edit</button>
-				<button class="delete">Delete</button>
+				<label>{{ items }}</label>
+			<button class="edit" onclick="document.location='{% url 'update' items.id %}'">Edit</button>
+			<button class="delete" onclick="document.location='{% url 'delete_task' items.id %}'">Delete</button>
+
+
+        {% endif %}
 			</li>
+			{% endfor %}
+		</ul>
+		<!-- End -->
 
 			<!-- <li>
 				<input type="checkbox" checked>
