@@ -20,6 +20,12 @@ body {
   
 }
 
+.dark-mode{
+	background: #04042afb;
+	
+	color: aliceblue;
+}
+
 
 h2 {
 	text-align:center;
