@@ -6,14 +6,13 @@
 		<form action="/" method="post">
 		<p>
 			{% csrf_token %}
-			{{ form }}
+			{{ form.title }}
 			<button type="submit">Add</button>
 		</p>
 		
 		</form>
 
 		<h3>Todo</h3>
-		
 		<!-- To do list items  -->
 		<ul id="incomplete-tasks" class="drop-items" >
 			{% for items in tasks %}
@@ -21,9 +20,10 @@
 			<label>{{ items.title }}</label>
 			<button class="edit" onclick="document.location='{% url 'update' items.id %}'">Edit</button>
 			<button class="delete" onclick="document.location='{% url 'delete_task' items.id %}'">Delete</button>
+			<small style="margin:6px; padding:2px;">Added at {{ items.created }}</small>
 			
 			</li>
-
+		
 		<h3>Completed</h3>
 		<ul id="completed-tasks" class="drop-completed">
 			<li>
@@ -34,21 +34,10 @@
 			<button class="edit" onclick="document.location='{% url 'update' items.id %}'">Edit</button>
 			<button class="delete" onclick="document.location='{% url 'delete_task' items.id %}'">Delete</button>
 
-
         {% endif %}
 			</li>
-			{% endfor %}
 		</ul>
-		<!-- End -->
-
-			<!-- <li>
-				<input type="checkbox" checked>
-				<label>See the Doctor</label>
-				<input type="text">
-				<button class="edit">Edit</button>
-				<button class="delete">Delete</button>
-			</li> -->
-
+			{% endfor %}
 		</ul>
 
 	</div>
