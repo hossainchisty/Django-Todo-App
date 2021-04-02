@@ -21,37 +21,8 @@
     {% block contain %}
         
     {% endblock contain %}
-        
-<script>
-		const dropitems = document.querySelector('.drop-items')
 
-		new Sortable(dropitems, {
-			animation: 330,
-
-		});
-
-		const completed = document.querySelector('.drop-completed')
-
-		new Sortable(completed, {
-			animation: 330,
-		})
-
-
-		function myFunction(){
-			var element = document.body;
-			element.classList.toggle("dark-mode");
-		}
-	</script>
-
-	<style>
-		.dark-mode{
-			background: #04042afb;
-			
-			color: aliceblue;
-		}
-		
-		
-	</style>
+	<script src="{% static '/js/main.js' %}"></script>
 </body>
 
 </html>
