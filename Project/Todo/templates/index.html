@@ -23,22 +23,22 @@
 			<small style="margin:6px; padding:2px;">Added at {{ items.created }}</small>
 			
 			</li>
+			{% endfor %}
 		
 		<h3>Completed</h3>
 		<ul id="completed-tasks" class="drop-completed">
-			<li>
 		{% if items.complete %}
+			<li>
 				<input type="checkbox" checked>
 
-				<label>{{ items }}</label>
+				<label>{{ items.title }}</label>
 			<button class="edit" onclick="document.location='{% url 'update' items.id %}'">Edit</button>
 			<button class="delete" onclick="document.location='{% url 'delete_task' items.id %}'">Delete</button>
 
-        {% endif %}
 			</li>
+        {% endif %}
 		</ul>
-			{% endfor %}
-		</ul>
+		</ul> 
 
 	</div>
 	
