@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<!--===== SORTABLE JS =====-->
+	<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+	<title>Todo List</title>
+</head>
+
+<body>
+	<div class="container">
+		<h2>TODO LIST</h2>
+
+		<!-- <img src="/image/moon.png" onclick=""> -->
+
+		<button type="button" style="margin-left:275px;" id="dark-light" onclick="myFunction()" title="Toggle dark/light mode">🌛</button>
+
+
+    
+    {% block contain %}
+        
+    {% endblock contain %}
+        
+<script>
+		const dropitems = document.querySelector('.drop-items')
+
+		new Sortable(dropitems, {
+			animation: 330,
+
+		});
+
+		const completed = document.querySelector('.drop-completed')
+
+		new Sortable(completed, {
+			animation: 330,
+		})
+
+
+		function myFunction(){
+			var element = document.body;
+			element.classList.toggle("dark-mode");
+		}
+	</script>
+
+	<style>
+		.dark-mode{
+			background: #04042afb;
+			
+			color: aliceblue;
+		}
+		
+		
+	</style>
+</body>
+
+</html>

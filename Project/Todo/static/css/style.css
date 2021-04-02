@@ -1,0 +1,156 @@
+/* Basic Style */
+
+body {
+	color: rgb(255, 255, 255);
+	font-family: Lato, sans-serif;
+	/* background: #52189ee0; */
+	background: #8794e0fd;
+}
+
+.container {
+	display: block;
+	width: 350px;
+	margin: 10px auto 100px;
+	padding: 0px 10px 10px 10px;
+	border-radius:30px;
+    background: rgba(0, 0, 0, 0); 
+    backdrop-filter: blur( 20.0px );
+	-webkit-backdrop-filter: blur( 20.0px );
+    border: 2px solid rgba(243, 237, 237, 0.822);
+  
+}
+
+
+h2 {
+	text-align:center;
+	padding-top:60px;
+	margin-bottom:0px;
+	text-shadow: -2px 0px 14px rgba(0,0,0,0.44);
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li * {
+	float: left;
+}
+
+li,
+h3 {
+	clear: both;
+	list-style: none;
+	text-shadow: -2px 0px 14px rgba(0,0,0,0.44);
+}
+
+input,
+button {
+	outline: none;
+}
+
+button {
+	background: none;
+	border: 0px;
+	color: rgb(255, 255, 255);
+	font-size: 15px;
+	width: 60px;
+	margin: 10px 0 0;
+	font-family: Lato, sans-serif;
+	cursor: pointer;
+}
+
+/* Heading */
+
+h3,
+label[for='new-task'] {
+	color: rgb(255, 255, 255);
+	font-weight: 700;
+	font-size: 15px;
+	border-bottom: 2px solid rgb(255, 255, 255);
+	padding: 20px 0 10px;
+	margin: 0;
+}
+input[type="text"] {
+	margin: 0;
+	font-size: 18px;
+	line-height: 18px;
+	height: 18px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	background: #fff;
+	border-radius: 6px;
+	font-family: Lato, sans-serif;
+	color: rgb(0, 0, 0);
+}
+
+input[type="text"]:focus {
+	color: rgb(26, 2, 2);
+}
+/* New Task */
+
+label[for='new-task'] {
+	display: block;
+	margin: 0 0 20px;
+}
+
+input#new-task {
+	float: left;
+	width: 318px;
+}
+
+button{
+  background: #000000;    
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  padding: 6px;
+  margin: 4px;
+
+}
+/* Task list */
+li {
+	overflow: hidden;
+	padding: 20px 0;
+	border-bottom: 1px solid #eee;
+}
+li > input[type="checkbox"] {
+	margin: 0 10px;
+	position: relative;
+	top: 15px;
+}
+li > label {
+	font-size: 18px;
+	line-height: 40px;
+	width: 237px;
+	padding: 0 0 0 11px;
+}
+li > input[type="text"] {
+	width: 226px;
+}
+
+#incomplete-tasks:hover{
+	cursor: grabbing;
+}
+#completed-tasks:hover{
+	cursor: grabbing;
+}
+/* Completed */
+
+#completed-tasks label {
+	text-decoration: line-through;
+	color: rgb(255, 255, 255);
+}
+/* Edit Task */
+
+ul li input[type=text] {
+	display: none;
+}
+
+ul li.editMode input[type=text] {
+	display: block;
+}
+
+ul li.editMode label {
+	display: none;
+}

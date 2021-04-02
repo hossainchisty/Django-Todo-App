@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+	{% block contain %}
+        
+		<h4>Are you sure you went to delete {{ item }} ?</h4>
+        <form method="POST">
+		<p>
+			{% csrf_token %}
+			
+			<button type="submit">Confirm</button>
+		</p>
+		
+		</form>
+	
+    {% endblock contain %}
+        

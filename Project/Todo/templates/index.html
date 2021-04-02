@@ -1,0 +1,56 @@
+{% extends '_base.html' %}
+
+	{% block contain %}
+        
+		<h3>What are you doing today?</h3>
+		<form action="/" method="post">
+		<p>
+			{% csrf_token %}
+			{{ form }}
+			<button type="submit">Add</button>
+		</p>
+		
+		</form>
+
+		<h3>Todo</h3>
+		<!-- To do list items  -->
+
+		<ul id="incomplete-tasks" class="drop-items">
+			{% for items in tasks %}
+			<li><input type="checkbox">
+				<label>{{ items }}</label>
+			<button class="edit" onclick="document.location='{% url 'update' items.id %}'">Edit</button>
+			<button class="delete" onclick="document.location='{% url 'delete_task' items.id %}'">Delete</button>
+			
+			</li>
+			{% endfor %}
+			
+		
+		</ul>
+		<!-- End -->
+
+		<h3>Completed</h3>
+
+		<ul id="completed-tasks" class="drop-completed">
+			<li>
+				<input type="checkbox" checked>
+
+				<label>See the Doctor</label>
+				<input type="text">
+				<button class="edit">Edit</button>
+				<button class="delete">Delete</button>
+			</li>
+
+			<!-- <li>
+				<input type="checkbox" checked>
+				<label>See the Doctor</label>
+				<input type="text">
+				<button class="edit">Edit</button>
+				<button class="delete">Delete</button>
+			</li> -->
+
+		</ul>
+
+	</div>
+	
+    {% endblock contain %}
