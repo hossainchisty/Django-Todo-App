@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 
@@ -122,7 +122,3 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = ['static']
 
-
-import django_heroku
-# Activate Django-Heroku.
-django_heroku.settings(locals())

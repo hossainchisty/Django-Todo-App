@@ -3,7 +3,6 @@
 body {
 	color: rgb(255, 255, 255);
 	font-family: Lato, sans-serif;
-	/* background: #52189ee0; */
 	background: #8794e0fd;
 }
 
@@ -22,10 +21,8 @@ body {
 
 .dark-mode{
 	background: #04042afb;
-	
 	color: aliceblue;
 }
-
 
 h2 {
 	text-align:center;

@@ -5,7 +5,7 @@
 		<p>
         <form method="post">
 			{% csrf_token %}
-			{{ form }}
+			{{ form.as_p }}
 			{{ complete }}
 			<button type="submit">Update</button>
 		</form>

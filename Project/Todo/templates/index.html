@@ -14,32 +14,32 @@
 
 		<h3>Todo</h3>
 		<!-- To do list items  -->
-		<ul id="incomplete-tasks" class="drop-items" >
+		<ul id="incomplete-tasks" class="drop-items">
 			{% for items in tasks %}
 			<li>
 			<label>{{ items.title }}</label>
 			<button class="edit" onclick="document.location='{% url 'update' items.id %}'">Edit</button>
 			<button class="delete" onclick="document.location='{% url 'delete_task' items.id %}'">Delete</button>
 			<small style="margin:6px; padding:2px;">Added at {{ items.created }}</small>
-			
 			</li>
 			{% endfor %}
-		
+			
 		<h3>Completed</h3>
 		<ul id="completed-tasks" class="drop-completed">
-		{% if items.complete %}
+		{% for items in tasks %}
 			<li>
+		{% if items.complete == True %}
 				<input type="checkbox" checked>
-
 				<label>{{ items.title }}</label>
 			<button class="edit" onclick="document.location='{% url 'update' items.id %}'">Edit</button>
 			<button class="delete" onclick="document.location='{% url 'delete_task' items.id %}'">Delete</button>
-
+			<small style="margin:6px; padding:2px;">Added at {{ items.created }}</small>
+		{% endif %}
 			</li>
-        {% endif %}
+		{% endfor %}
+
 		</ul>
 		</ul> 
-
 	</div>
 	
     {% endblock contain %}
