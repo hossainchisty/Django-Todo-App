@@ -1,3 +1,5 @@
+### Task tracking for your everyday needs.
+
 ***__ 📸Preview__***
 
 ![Image of demo](https://github.com/hossainchisty/Django-Todo-App/blob/master/lightmode.png)
