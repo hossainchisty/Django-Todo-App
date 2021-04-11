@@ -1,4 +1,5 @@
-### Task tracking for your everyday needs.
+### Task tracking for your everyday needs. Keep track of the daily tasks in life and
+get that satisfaction upon completion.
 
 ***__ 📸Preview__***
 
