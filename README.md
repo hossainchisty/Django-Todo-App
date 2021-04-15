@@ -2,6 +2,7 @@
 
 ***__ 📸Preview__***
 
+***__Light Mode__***
 ![Image of demo](https://github.com/hossainchisty/Django-Todo-App/blob/master/lightmode.png)
 
 ***__Dark Mode__***
