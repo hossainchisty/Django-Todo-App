@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from django.http import HttpResponse
 from .models import *
 from .forms import *
 # Create your views here.
@@ -34,13 +35,12 @@ def update_tasks(request, pk):
     return render(request, 'update_tasks.html',context)
 
 def delete_tasks(request, pk):
-    item = Task.objects.get(id=pk)
-
     if request.method == "POST":
+        item = Task.objects.get(id=pk)
         item.delete()
 
         return redirect('/')
-        
-    context = {'item':item}
 
-    return render(request, 'delete_tasks.html', context)
+    return HttpResponse('something went wrong')
+    
+  
