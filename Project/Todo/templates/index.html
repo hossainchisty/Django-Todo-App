@@ -19,7 +19,10 @@
 			<li>
 			<label>{{ items.title }}</label>
 			<button class="edit" onclick="document.location='{% url 'update' items.id %}'">Edit</button>
-			<button class="delete" onclick="document.location='{% url 'delete_task' items.id %}'">Delete</button>
+			<form method="POST" action="{% url 'delete_task' items.id %}">
+				{% csrf_token %}
+			<button class="delete" type="submit">Delete</button>
+			</form>
 			<small style="margin:6px; padding:2px;">Added at {{ items.created }}</small>
 			</li>
 			{% endfor %}
