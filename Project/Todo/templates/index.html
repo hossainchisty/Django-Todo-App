@@ -25,6 +25,10 @@
 			</form>
 			<small style="margin:6px; padding:2px;">Added at {{ items.created }}</small>
 			</li>
+			{% empty %}
+		
+			<h5 style="color:lightgrey;text-align:center; text-shadow: 2px 2px 5px black;">Tap the add button above to create a task.</h5>
+		
 			{% endfor %}
 			
 		<h3>Completed</h3>
