@@ -41,6 +41,6 @@ def delete_tasks(request, pk):
 
         return redirect('/')
 
-    return HttpResponse('something went wrong')
+    return HttpResponse('Something went wrong')
     
   
