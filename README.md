@@ -1,6 +1,6 @@
 ### Task tracking for your everyday needs. Keep track of the daily tasks in life and get that satisfaction upon completion. 
 
-FEATURES OF [todoappdjan](https://todoappdjan.herokuapp.com/)
+Features of - [todoappdjan](https://todoappdjan.herokuapp.com/) 
 <br>
 ✅ Add a task anytime using the Add Button.
 <br>
