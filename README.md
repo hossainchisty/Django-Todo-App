@@ -1,4 +1,21 @@
-### Task tracking for your everyday needs. Keep track of the daily tasks in life and get that satisfaction upon completion. <br> <br> Live [Demo](https://todoappdjan.herokuapp.com/)
+### Task tracking for your everyday needs. Keep track of the daily tasks in life and get that satisfaction upon completion. 
+
+FEATURES OF [todoappdjan](https://todoappdjan.herokuapp.com/)
+<br>
+✅ Add a task anytime using the Add Button.
+<br>
+✅ Swipe a task to the right to mark it as done..
+<br>
+✅ Delete items in a task list and edit task.
+<br>
+✅ Support for dark mode.
+<br>
+✅ Make to-do's and checklists.
+<br>
+✅ Does not require an account.
+<br>
+✅ Does not require any permission.
+<br>
 
 ***__ 📸Preview__***
 
